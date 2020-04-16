@@ -8,7 +8,7 @@ CREATE TABLE messages (
   messageText VARCHAR(1000),
   user_id INTEGER,
   room_id INTEGER,
-  PRIMARY KEY (id, user_id, room_id)
+  PRIMARY KEY (id)
 );
 
 /* Create other tables and define schemas for them here! */
@@ -24,9 +24,6 @@ CREATE TABLE rooms (
   PRIMARY KEY (id)
 );
 
-/* Foreign Keys */
-ALTER TABLE messages ADD FOREIGN KEY (user_id) REFERENCES users (id);
-ALTER TABLE messages ADD FOREIGN KEY (room_id) REFERENCES rooms (id);
 
 
 /*  Execute this file from the command line by typing:
