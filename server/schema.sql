@@ -4,25 +4,25 @@ USE chat;
 
 CREATE TABLE messages (
   /* Describe your table here.*/
-  id INTEGER AUTO_INCREMENT,
-  messageText VARCHAR(1000),
-  user_id INTEGER,
-  room_id INTEGER,
-  PRIMARY KEY (id)
+  id INT NOT NULL AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  messageText VARCHAR(200) NOT NULL,
+  roomname VARCHAR(20),
+  PRIMARY KEY (ID)
 );
 
 /* Create other tables and define schemas for them here! */
 CREATE TABLE users (
-  id INTEGER AUTO_INCREMENT,
-  username VARCHAR(30),
-  PRIMARY KEY (id)
+  id INT NOT NULL AUTO_INCREMENT,
+  username VARCHAR(40) NOT NULL,
+  PRIMARY KEY (ID)
 );
 
-CREATE TABLE rooms (
-  id INTEGER AUTO_INCREMENT,
-  roomname VARCHAR(30),
-  PRIMARY KEY (id)
-);
+-- CREATE TABLE rooms (
+--   id INTEGER AUTO_INCREMENT,
+--   roomname VARCHAR(30),
+--   PRIMARY KEY (id)
+-- );
 
 
 
